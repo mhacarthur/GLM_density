@@ -69,6 +69,7 @@ print(f'YEAR      : {year}')
 print(f'MONTH     : {month}')
 print(f'REGION    : {region}')
 print(f'RESOLUTION: {grid_r}')
+print()
 
 grids = list()
 for lat in range(lats.size-1):
@@ -115,7 +116,7 @@ for i in range(tempos):
         print('   ',lista[i],'No Existe')
         density = np.zeros([len(lat_new),len(lon_new)])
 
-    Densidad[count,:,:] = density
+    Densidad[count,:,:] = densityvar_unit = 'flash/0.5x0.5'
     count = count + 1
 
 print()
