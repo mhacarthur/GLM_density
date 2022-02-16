@@ -116,7 +116,7 @@ for i in range(tempos):
         print('   ',lista[i],'No Existe')
         density = np.zeros([len(lat_new),len(lon_new)])
 
-    Densidad[count,:,:] = densityvar_unit = 'flash/0.5x0.5'
+    Densidad[count,:,:] = density
     count = count + 1
 
 print()
