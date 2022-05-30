@@ -77,7 +77,7 @@ for nn in range(len_list_files):
     file_download = 's3://noaa-goes16/' + name1
     salida = dir_out + name1.split('/')[-1]
     
-    if nn%2000 == 0:
+    if nn%5000 == 0:
         print(f'{nn}/{len_list_files}')
 
     if  file_exists(salida) == True:
