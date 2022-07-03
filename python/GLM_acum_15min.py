@@ -22,6 +22,7 @@ month = vars(parser.parse_args())['month']
 acumm = vars(parser.parse_args())['acumm']
 region = vars(parser.parse_args())['region']
 
+# data_dir = '/mnt/Data/Data/GLM/SA/List/List_'+ acumm + '/'+year+'/'+month+'/*.csv'
 data_dir = '/mnt/Data/Data/GLM/SA/List/List_'+ acumm + '/'+year+'/'+month+'/*.csv'
 lista_GLM = glob.glob(data_dir)
 lista_GLM = sorted(lista_GLM)
@@ -45,9 +46,12 @@ for t in range(len(lista_GLM)): #len(lista_GLM)
     GLM_lon = []
     GLM_lat = []
 
+    salida = '/mnt/Data/Data/GLM/SA/Point/'+year+'/'+month+'/' + name_out
+
     for n in range(len(lista_files)):
 
-        name_v1 = '/media/arturo/Seagate Expansion Drive/' + lista_files['File'][n]
+        # name_v1 = '/media/arturo/Seagate Expansion Drive/' + lista_files['File'][n]
+        name_v1 = '/mnt/Data/' + lista_files['File'][n]
         data = Dataset(name_v1,mode = 'r')
 
         lat = data['flash_lat']
